@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import UserSubmissionForm from './UserSubmissionForm.js';
+import Result from './Result.js';
 
 class Home extends React.Component {
   constructor(props) {
@@ -36,6 +37,11 @@ class Home extends React.Component {
           <div>
             <UserSubmissionForm 
               getResult={this.getResult}
+            />
+          </div>
+          <div>
+            <Result
+              results={this.state.results}
             />
           </div>
         </section>
