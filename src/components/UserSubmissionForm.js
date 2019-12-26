@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 
 class UserSubmissionForm extends React.Component {
   constructor(props) {
@@ -31,6 +30,8 @@ class UserSubmissionForm extends React.Component {
     // that will make axios GET request to the back end
     // then it will save the result within it's state
     // and send the result to the Result comp.
+
+    this.props.getResult();
   }
 
   render() {
