@@ -27,11 +27,12 @@ class UserSubmissionForm extends React.Component {
     });
 
     // invoke callback function from home
-    // that will make axios GET request to the back end
+    // that will make axios POST request to the back end
     // then it will save the result within it's state
     // and send the result to the Result comp.
 
     this.props.getResult();
+    this.props.saveSubmission(this.state.sentence);
   }
 
   render() {

@@ -9,12 +9,13 @@ class Home extends React.Component {
     this.state = {
       results: undefined,
       error: undefined,
+      submissionText: undefined, 
     };
   }
 
   getResult = () => {
     console.log('get result method is called')
-    axios.get('http://localhost:5000/api/v1/results')
+    axios.post('http://localhost:5000/api/v1/results', )
       .then((response) => {
         this.setState({
           results: response.data,
@@ -27,6 +28,12 @@ class Home extends React.Component {
       });
   }
 
+  saveSubmission = (sentence) => {
+    this.setState({
+      submissionText: sentence,
+    });
+  }
+
   render() {
     return (
       <div>
@@ -37,6 +44,7 @@ class Home extends React.Component {
           <div>
             <UserSubmissionForm 
               getResult={this.getResult}
+              saveSubmission={this.saveSubmission}
             />
           </div>
           <div>
