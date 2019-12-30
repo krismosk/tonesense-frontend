@@ -4,7 +4,6 @@ class Result extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
     };
   }
 
@@ -13,13 +12,21 @@ class Result extends React.Component {
       return "results is undefined";
     }
     else {
-      return <div>{`${results}`}</div>;
+      console.log(results);
+      return(
+        <div>
+          <h3>Sentiment Analysis Results</h3>
+          <p>{`Your submission: ${results.text}`}</p>
+          <p>{`Score: ${results.score}`}</p>
+          <p>{`Magnitude: ${results.magnitude}`}</p>
+        </div>
+      )
     }
   }
 
   render() {
     let resultSentence = this.displayResults(this.props.results);
-    
+    // console.log(resultSentence);
     return (
       <div>
         { resultSentence }

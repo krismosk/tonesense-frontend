@@ -34,6 +34,13 @@ class Home extends React.Component {
     });
   }
 
+  saveCriteria(results) {
+    this.setState({
+      score: results.score,
+      magnitude: results.magnitude,
+    })
+  }
+
   render() {
     return (
       <div>
