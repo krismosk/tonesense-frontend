@@ -7,18 +7,31 @@ class Result extends React.Component {
     };
   }
 
+  makeEntities(entities) {
+    let entityList = entities.map((entity, i) => (
+      <div>
+        <p>{`Name: ${entity['name']}`} {`Type: ${entity['type']}`} {`Salience ${entity['salience']}`}</p>
+      </div>
+    ));
+
+    return entityList;
+  }
+
   displayResults(results) {
     if (results === undefined) {
-      return "results is undefined";
+      return "";
     }
     else {
-      console.log(results);
       return(
         <div>
           <h3>Sentiment Analysis Results</h3>
           <p>{`Your submission: ${results.text}`}</p>
           <p>{`Score: ${results.score}`}</p>
           <p>{`Magnitude: ${results.magnitude}`}</p>
+          {/* <p>{`Entities: ${this.makeEntities(results.entities)}`}</p> */}
+          <div>Entities:
+            {this.makeEntities(results.entities)}
+          </div>
         </div>
       )
     }
