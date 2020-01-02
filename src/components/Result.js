@@ -43,10 +43,15 @@ class Result extends React.Component {
       return(
         <div>
           <h3>Sentiment Analysis Results</h3>
-          <p>{`Your submission: ${results.text}`}</p>
+          <p>{`Your submission text: ${results.text}`}</p>
           <p>{`Your sentence's tone is likely ${this.convertSentiment(results.score)}`}.</p>
           <p>{`Score: ${results.score}`}</p>
           <p>{`Magnitude: ${results.magnitude}`}</p>
+          <span>
+            Magnitude indicates the overall strength of emotion (both positive and negative) within the given text.
+            Unlike score, magnitude is not normalized, each expression of emotion within the text contributes to the 
+            text's magnitude (so, longer text blocks may have greater magnitudes.)
+          </span>
           <div>Entities:
             {this.makeEntities(results.entities)}
           </div>
