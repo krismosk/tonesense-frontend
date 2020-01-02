@@ -1,4 +1,11 @@
 import React from 'react';
+import Popover from 'react-bootstrap/Popover';
+import PopoverContent from 'react-bootstrap/PopoverContent';
+import PopoverTitle from 'react-bootstrap/PopoverTitle';
+import Overlay from 'react-bootstrap/Overlay';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+import Button from 'react-bootstrap/Button';
 
 class Result extends React.Component {
   constructor(props) {
@@ -60,12 +67,40 @@ class Result extends React.Component {
     }
   }
 
+  renderTooltip(props) {
+    return <Tooltip {...props}>Simple tooltip</Tooltip>;
+  }
+
+  renderPopover() {
+    return ( 
+      <Popover id="popover-basic">
+        <PopoverTitle as="h3">
+          Title
+        </PopoverTitle>
+        <PopoverContent>
+          Content
+        </PopoverContent>
+      </Popover>
+
+    )
+  }
+
+  renderOverlay() {
+    return (
+      <OverlayTrigger trigger="click" placement="right" overlay={this.renderPopover()}>
+        <Button variant="success">Hover me to see</Button>
+      </OverlayTrigger>
+    );
+  }
+
   render() {
     let resultSentence = this.displayResults(this.props.results);
+    
 
     return (
       <div>
-        { resultSentence }
+        <section>{ resultSentence }</section>
+        <section>{ this.renderOverlay() }</section>
       </div>
     )
   }
