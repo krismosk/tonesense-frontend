@@ -14,6 +14,31 @@ class Result extends React.Component {
     };
   }
 
+  renderTooltip(props) {
+    return <Tooltip {...props}>Simple tooltip</Tooltip>;
+  }
+
+  renderPopover(title, content) {
+    return ( 
+      <Popover id="popover-basic">
+        <PopoverTitle as="h3">
+          {`${title}`}
+        </PopoverTitle>
+        <PopoverContent>
+          {`${content}`}
+        </PopoverContent>
+      </Popover>
+    )
+  }
+
+  renderOverlay(text, title, content) {
+    return (
+      <OverlayTrigger trigger="hover" placement="right" overlay={this.renderPopover(title, content)}>
+  <a href='#' role="button" class="btn popovers" data-toggle="popover">{`${text}`}</a>
+      </OverlayTrigger>
+    );
+  }
+
   makeEntities(entities) {
     let entityList = entities.map((entity, i) => (
       <div>
@@ -25,9 +50,6 @@ class Result extends React.Component {
   }
 
   convertSentiment(score) {
-    // if result.score is 0.25 to 1.0 return "positive"
-    // elsif result.score is === -0.25 to 0.25 return "neutral"
-    // else result.score is === -1.0 to -0.25 return "negative"
     if (score >= 0.25 && score <= 1.0) {
       return "positive";
     }
@@ -52,13 +74,8 @@ class Result extends React.Component {
           <h3>Sentiment Analysis Results</h3>
           <p>{`Your submission text: ${results.text}`}</p>
           <p>{`Your sentence's tone is likely ${this.convertSentiment(results.score)}`}.</p>
-          <p>{`Score: ${results.score}`}</p>
-          <p>{`Magnitude: ${results.magnitude}`}</p>
-          <span>
-            Magnitude indicates the overall strength of emotion (both positive and negative) within the given text.
-            Unlike score, magnitude is not normalized, each expression of emotion within the text contributes to the 
-            text's magnitude (so, longer text blocks may have greater magnitudes.)
-          </span>
+          <p>{this.renderOverlay('Score:', 'Score Explained', 'Score of the sentiment ranges between -1.0 to 1.0 and corresponds to the overall emotional leaning of the text')}{`${results.score}`}</p>
+          <p>{this.renderOverlay('Magnitude:', 'Magnitude Explained', 'Magnitude indicates the overall strength of emotion within the given text. Unlike score, magnitude is not normalized, each expression of emotion within the text contributes to the texts magnitude.')}{`${results.magnitude}`}</p>
           <div>Entities:
             {this.makeEntities(results.entities)}
           </div>
@@ -67,40 +84,12 @@ class Result extends React.Component {
     }
   }
 
-  renderTooltip(props) {
-    return <Tooltip {...props}>Simple tooltip</Tooltip>;
-  }
-
-  renderPopover() {
-    return ( 
-      <Popover id="popover-basic">
-        <PopoverTitle as="h3">
-          Title
-        </PopoverTitle>
-        <PopoverContent>
-          Content
-        </PopoverContent>
-      </Popover>
-
-    )
-  }
-
-  renderOverlay() {
-    return (
-      <OverlayTrigger trigger="click" placement="right" overlay={this.renderPopover()}>
-        <Button variant="success">Hover me to see</Button>
-      </OverlayTrigger>
-    );
-  }
-
   render() {
     let resultSentence = this.displayResults(this.props.results);
     
-
     return (
       <div>
         <section>{ resultSentence }</section>
-        <section>{ this.renderOverlay() }</section>
       </div>
     )
   }
