@@ -34,7 +34,7 @@ class Result extends React.Component {
   renderOverlay(text, title, content) {
     return (
       <OverlayTrigger trigger="hover" placement="right" overlay={this.renderPopover(title, content)}>
-  <a href='#' role="button" class="btn popovers" data-toggle="popover">{`${text}`}</a>
+       <a href='#' data-toggle="popover">{`${text}`}</a>
       </OverlayTrigger>
     );
   }
@@ -74,8 +74,8 @@ class Result extends React.Component {
           <h3>Sentiment Analysis Results</h3>
           <p>{`Your submission text: ${results.text}`}</p>
           <p>{`Your sentence's tone is likely ${this.convertSentiment(results.score)}`}.</p>
-          <p>{this.renderOverlay('Score:', 'Score Explained', 'Score of the sentiment ranges between -1.0 to 1.0 and corresponds to the overall emotional leaning of the text')}{`${results.score}`}</p>
-          <p>{this.renderOverlay('Magnitude:', 'Magnitude Explained', 'Magnitude indicates the overall strength of emotion within the given text. Unlike score, magnitude is not normalized, each expression of emotion within the text contributes to the texts magnitude.')}{`${results.magnitude}`}</p>
+          <p>{this.renderOverlay('Score: ', 'Score Explained', 'Score of the sentiment ranges between -1.0 to 1.0 and corresponds to the overall emotional leaning of the text')}{`${results.score}`}</p>
+          <p>{this.renderOverlay('Magnitude: ', 'Magnitude Explained', 'Magnitude indicates the overall strength of emotion within the given text. Unlike score, magnitude is not normalized, each expression of emotion within the text contributes to the texts magnitude.')}{`${results.magnitude}`}</p>
           <div>Entities:
             {this.makeEntities(results.entities)}
           </div>
