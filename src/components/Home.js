@@ -6,6 +6,7 @@ import Features from './Features.js';
 import Landing from './Landing.js';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import './Home.css';
 
 class Home extends React.Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class Home extends React.Component {
     return (
       <div>
         <nav>
-          <Navbar id="navbar-2" collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+          <Navbar id="navbar-2" collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
             <Navbar.Brand href="#home">ToneSense</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -64,8 +65,10 @@ class Home extends React.Component {
           </Navbar>
         </nav>
         <div data-spy="scroll" data-target="#navbar-2" data-offset="0">
-            <h1 id="home">Introducing ToneSense</h1>
+            <section className="home-section">
+              <h1 id="home">Introducing ToneSense</h1>
               <Landing />
+            </section>
             <h1 id="features">Tone is essential for effective writing</h1>
               <Features />
             <h1 id="demo">Demo Section</h1>
