@@ -51,7 +51,7 @@ class Home extends React.Component {
       <div>
         <nav>
           <Navbar id="navbar-2" collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
-            <Navbar.Brand href="#home">ToneSense</Navbar.Brand>
+            <Navbar.Brand className="brandname" href="#home">ToneSense</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">

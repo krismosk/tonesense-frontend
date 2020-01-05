@@ -1,12 +1,24 @@
-body {
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+h1 {
+  font-family: 'Quicksand';
+  src: local('Quicksand'), url(./fonts/Quicksand-Bold.ttf) format('tff');
+  font-weight: bolder;
+  font-size: larger;
+  text-shadow: 2px 2px #81D8C4;
 }
 
-header {
-  font-family: 'Quicksand', sans-serif;
+p {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(./fonts/Raleway-Medium.ttf) format('ttf');
+  text-align: center;
 }
 
+h4 {
+  font-family: 'Quicksand';
+  src: local('Quicksand'), url(./fonts/Quicksand-Medium.ttf) format('tff');
+}
 
+nav {
+  font-family: 'Quicksand';
+  src: local('Quicksand'), url(./fonts/Quicksand-Bold.ttf) format('tff');
+  font-weight: bolder;
+}
