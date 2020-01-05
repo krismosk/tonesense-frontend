@@ -1,9 +1,24 @@
-.home-section {
+.landing-section {
   background-image: url(../img/congruent_pentagon.png);
+  color: black;
+  padding: 15%;
+}
+
+#navbar-2 {
+  background-color: #81D8C4;
+}
+
+.feature-section {
+  /* background-image: url(../img/graysquare.png); */
   color: black;
   padding: 13%;
 }
 
-.brandname {
-  color: #81D8C4;
+.demo-section {
+  background-color:#F2F6D4;
+  padding: 13%;
+}
+
+.contact-section {
+  padding: 13%;
 }

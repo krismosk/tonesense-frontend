@@ -65,25 +65,31 @@ class Home extends React.Component {
           </Navbar>
         </nav>
         <div data-spy="scroll" data-target="#navbar-2" data-offset="0">
-            <section className="home-section">
+            <section className="landing-section">
               <h1 id="home">Introducing ToneSense</h1>
               <Landing />
             </section>
-            <h1 id="features">Tone is essential for effective writing</h1>
+            <section className="feature-section">
+              <h1 id="features">Tone is essential for effective writing</h1>
               <Features />
-            <h1 id="demo">Demo Section</h1>
-              <div>
-                <UserSubmissionForm 
-                  getResult={this.getResult}
-                  saveSubmission={this.saveSubmission}
-                />
-              </div>
-              <div>
-                <Result
-                  results={this.state.results}
-                />
-              </div>
-            <h1 id="contact">Contact Section</h1>
+            </section>
+            <section className="demo-section">
+              <h1 id="demo">Demo Section</h1>
+                <div>
+                  <UserSubmissionForm 
+                    getResult={this.getResult}
+                    saveSubmission={this.saveSubmission}
+                  />
+                </div>
+                <div>
+                  <Result
+                    results={this.state.results}
+                  />
+                </div>
+            </section>
+            <section className="contact-section">
+              <h1 id="contact">Contact Section</h1>
+            </section>
         </div>
       </div>
     )
