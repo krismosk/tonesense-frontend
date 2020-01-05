@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import UserSubmissionForm from './UserSubmissionForm.js';
 import Result from './Result.js';
+import Features from './Features.js';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -63,6 +64,8 @@ class Home extends React.Component {
         </nav>
         <div data-spy="scroll" data-target="#navbar-2" data-offset="0">
             <h3 id="features">Features Section</h3>
+              <Features />
+            <h3 id="demo">Demo Section</h3>
               <div>
                 <UserSubmissionForm 
                   getResult={this.getResult}
@@ -74,7 +77,6 @@ class Home extends React.Component {
                   results={this.state.results}
                 />
               </div>
-            <h3 id="demo">Demo Section</h3>
             <h3 id="contact">Contact Section</h3>
         </div>
       </div>

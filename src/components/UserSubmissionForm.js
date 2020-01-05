@@ -38,7 +38,6 @@ class UserSubmissionForm extends React.Component {
   render() {
     return (
       <div>
-        <h3>Submission Form</h3>
         <form>
           <div>
             <input
