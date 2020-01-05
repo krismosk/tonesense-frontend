@@ -38,6 +38,7 @@ class UserSubmissionForm extends React.Component {
   render() {
     return (
       <div>
+        <p>Get started for free and see how ToneSense can help you get your message across the right way - every time.</p>
         <form>
           <div>
             <input

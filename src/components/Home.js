@@ -64,9 +64,9 @@ class Home extends React.Component {
           </Navbar>
         </nav>
         <div data-spy="scroll" data-target="#navbar-2" data-offset="0">
-            <h1 id="home">Landing</h1>
+            <h1 id="home">Introducing ToneSense</h1>
               <Landing />
-            <h1 id="features">Features Section</h1>
+            <h1 id="features">Tone is essential for effective writing</h1>
               <Features />
             <h1 id="demo">Demo Section</h1>
               <div>
