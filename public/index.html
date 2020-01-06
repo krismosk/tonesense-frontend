@@ -25,7 +25,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+<<<<<<< HEAD
     <title>ToneSense</title>
+=======
+    <title>React App</title>
+>>>>>>> test_firebase
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -41,6 +45,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
+    <!-- from master -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         try {
@@ -54,6 +59,19 @@
       });
     </script>
 
+    <!-- from test_firebase -->
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script> -->
   </body>
   <!-- Background image source: Unsplash.com -->
   <!-- Icons source: Iconscout.com, Github.com -->
