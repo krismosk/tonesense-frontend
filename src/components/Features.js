@@ -14,7 +14,7 @@ import Col from 'react-bootstrap/Col';
 // import 'img/customer_feedback.png';
 
 const Features = (props) => {
-  // console.log(props.location)
+
   return (
     <div>
       <h4>Key Features</h4>
@@ -71,15 +71,6 @@ const Features = (props) => {
           </Col>
         </Row>
       </Container>
-      
-
-
-
-      
-      
-
-
-
     </div>
   )
 }

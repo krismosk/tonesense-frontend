@@ -6,6 +6,7 @@ import Features from './Features.js';
 import Landing from './Landing.js';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import github_64 from '../img/github_64.png';
 import './Home.css';
 
 class Home extends React.Component {
@@ -88,7 +89,11 @@ class Home extends React.Component {
                 </div>
             </section>
             <section className="contact-section">
-              <h1 id="contact">Contact Section</h1>
+              <h1 id="contact">Want to know more?</h1>
+                <p>Created by a student at Ada Developer's Academy</p>
+                <p>
+                  <a href="https://github.com/krismosk/frontend-capstone-2/"><img src={github_64} alt="Github logo"></img></a>
+                </p>
             </section>
         </div>
       </div>
