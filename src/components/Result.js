@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Popover from 'react-bootstrap/Popover';
 import PopoverContent from 'react-bootstrap/PopoverContent';
 import PopoverTitle from 'react-bootstrap/PopoverTitle';
@@ -60,7 +61,6 @@ class Result extends React.Component {
 
   createEmojiList(sentiment) {
     let emojis = []
-    console.log(emoji.names);
     
     if (sentiment === "positive") {
       emojis.push(emoji.getUnicode("grin"));
@@ -110,5 +110,9 @@ class Result extends React.Component {
     )
   }
 }
+
+Result.propTypes = {
+  results: PropTypes.array,
+};
 
 export default Result;

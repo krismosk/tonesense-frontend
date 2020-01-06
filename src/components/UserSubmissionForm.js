@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
@@ -28,11 +29,6 @@ class UserSubmissionForm extends React.Component {
     this.setState({
       sentence: '',
     });
-
-    // invoke callback function from home
-    // that will make axios POST request to the back end
-    // then it will save the result within it's state
-    // and send the result to the Result comp.
     
     this.props.saveSubmission(this.state.sentence);
     this.props.getResult(this.state.sentence);
@@ -64,6 +60,11 @@ class UserSubmissionForm extends React.Component {
       </div>
     )
   }
+}
+
+UserSubmissionForm.propTypes = {
+  getResult: PropTypes.func,
+  saveSubmission: PropTypes.func,
 }
 
 export default UserSubmissionForm;
