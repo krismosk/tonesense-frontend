@@ -42,37 +42,19 @@ class UserSubmissionForm extends React.Component {
     return (
       <div>
         <p>Get started for free and see how ToneSense can help you get your message across the right way - every time.</p>
-        {/* <form>
-          <div>
-            <input
-              placeholder="Enter some text..."
-              type="text"
-              value={this.state.sentence}
-              name="sentence"
-              onChange={this.onFormChange}
-            />
-          </div>
-          <div>
-            <input 
-              type="submit"
-              value="Generate Result"
-              onClick={this.onFormSubmit}
-            />
-          </div>
-        </form> */}
-
         <Form onSubmit={this.onFormSubmit}>
           <Form.Group>
             <Form.Row>
               <Col>
-                <Form.Label>Enter your sentence</Form.Label>
+                <Form.Label>Enter your sentence</Form.Label><br></br>
                 <Form.Control 
+                  placeholder="ToneSense is so cool!"
                   type="text"
                   value={this.state.sentence}
                   name="sentence"
                   onChange={this.onFormChange}
-                />
-                <Button onClick={this.onFormSubmit}>
+                /><br></br>
+                <Button variant="outline-success" onClick={this.onFormSubmit}>
                   Generate Result
                 </Button>
               </Col>
