@@ -1,4 +1,7 @@
 import React from 'react';
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 class UserSubmissionForm extends React.Component {
   constructor(props) {
@@ -39,10 +42,10 @@ class UserSubmissionForm extends React.Component {
     return (
       <div>
         <p>Get started for free and see how ToneSense can help you get your message across the right way - every time.</p>
-        <form>
+        {/* <form>
           <div>
             <input
-              placeholder="Enter your sentence here..."
+              placeholder="Enter some text..."
               type="text"
               value={this.state.sentence}
               name="sentence"
@@ -56,7 +59,26 @@ class UserSubmissionForm extends React.Component {
               onClick={this.onFormSubmit}
             />
           </div>
-        </form>
+        </form> */}
+
+        <Form onSubmit={this.onFormSubmit}>
+          <Form.Group>
+            <Form.Row>
+              <Col>
+                <Form.Label>Enter your sentence</Form.Label>
+                <Form.Control 
+                  type="text"
+                  value={this.state.sentence}
+                  name="sentence"
+                  onChange={this.onFormChange}
+                />
+                <Button onClick={this.onFormSubmit}>
+                  Generate Result
+                </Button>
+              </Col>
+            </Form.Row>
+          </Form.Group>
+        </Form>
       </div>
     )
   }

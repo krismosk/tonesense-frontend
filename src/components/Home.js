@@ -94,6 +94,7 @@ class Home extends React.Component {
                 <p>
                   <a href="https://github.com/krismosk/frontend-capstone-2/"><img src={github_64} alt="Github logo"></img></a>
                 </p>
+                <p><small>View source code on Github</small></p>
             </section>
         </div>
       </div>
