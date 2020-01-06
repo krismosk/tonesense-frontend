@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Landing = (props) => {
 
   return (
@@ -10,6 +9,5 @@ const Landing = (props) => {
     </div>
   )
 }
-
 
 export default Landing; 

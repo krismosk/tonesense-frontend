@@ -20,7 +20,6 @@ class Home extends React.Component {
   }
 
   getResult = (submissionText) => {
-    console.log('get result method is called')
     axios.post(`http://localhost:5000/api/v1/results/${submissionText}`, submissionText)
       .then((response) => {
         this.setState({
