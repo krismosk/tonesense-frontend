@@ -7,6 +7,7 @@ import Landing from './Landing.js';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import github_64 from '../img/github_64.png';
+import logo from '../img/logo.png';
 import './Home.css';
 
 class Home extends React.Component {
@@ -51,6 +52,7 @@ class Home extends React.Component {
       <div>
         <nav>
           <Navbar id="navbar-2" collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
+            {/* <img src={logo}></img><br></br> */}
             <Navbar.Brand className="brandname" href="#home">ToneSense</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
