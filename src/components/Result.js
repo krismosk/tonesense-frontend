@@ -5,7 +5,7 @@ import PopoverTitle from 'react-bootstrap/PopoverTitle';
 import Overlay from 'react-bootstrap/Overlay';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 
 class Result extends React.Component {
   constructor(props) {
@@ -71,14 +71,24 @@ class Result extends React.Component {
     else {
       return(
         <div>
-          <h3>Sentiment Analysis Results</h3>
-          <p>{`Your submission text: ${results.text}`}</p>
+          <h4><strong>Sentiment Analysis Results</strong></h4>
+          <Table size="sm">
+            <thead>
+              <tr>
+                
+              </tr>
+            </thead>
+          </Table>
+          
+          
+          <p>{`You submitted: "${results.text}"`}</p>
           <p>{`Your sentence's tone is likely ${this.convertSentiment(results.score)}`}.</p>
           <p>{this.renderOverlay('Score: ', 'Score Explained', 'Score of the sentiment ranges between -1.0 to 1.0 and corresponds to the overall emotional leaning of the text.')}{`${results.score}`}</p>
           <p>{this.renderOverlay('Magnitude: ', 'Magnitude Explained', 'Magnitude indicates the overall strength of emotion within the given text. Unlike score, magnitude is not normalized, each expression of emotion within the text contributes to the texts magnitude.')}{`${results.magnitude}`}</p>
-          <div>Entities:
+          <p>Suggested Emojis:</p>
+          {/* <div>Entities:
             {this.makeEntities(results.entities)}
-          </div>
+          </div> */}
         </div>
       )
     }
