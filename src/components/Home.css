@@ -2,16 +2,16 @@
   background-image: url(../img/congruent_pentagon.png);
   color: black;
   padding: 15%;
-}
-
-#navbar-2 {
-  background-color: #81D8C4;
+  height: 100%;
+  width: 100%;
 }
 
 .feature-section {
-  /* background-image: url(../img/graysquare.png); */
   color: black;
   padding-top: 6%;
+  /* height: 100vh; */
+  height: 100%;
+  width: 100%;
 }
 
 .demo-section {

@@ -52,8 +52,8 @@ class Home extends React.Component {
       <div>
         <nav>
           <Navbar id="navbar-2" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
-            {/* <img src={logo}></img><br></br> */}
-            <Navbar.Brand className="brandname" href="#home">ToneSense</Navbar.Brand>
+            
+            <Navbar.Brand className="brandname" href="#home"><img src={logo}></img> ToneSense</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -67,14 +67,15 @@ class Home extends React.Component {
           </Navbar>
         </nav>
         <div data-spy="scroll" data-target="#navbar-2" data-offset="0">
-            <section className="landing-section">
-              <h1 id="home">Introducing ToneSense</h1>
-              <Landing />
-            </section>
-            <section className="feature-section">
+            <div className="landing-section">
+              <h1 id="home"><Landing /></h1>
+            </div>
+
+            <div className="feature-section">
               <h1 id="features">Tone is essential for effective writing</h1>
               <Features />
-            </section>
+            </div>
+
             <section className="demo-section">
               <h1 id="demo">Demo Section</h1>
                 <div>
@@ -89,6 +90,7 @@ class Home extends React.Component {
                   />
                 </div>
             </section>
+
             <section className="contact-section">
               <h1 id="contact">Want to know more?</h1>
                 <p>Created by a student at Ada Developer's Academy</p>
