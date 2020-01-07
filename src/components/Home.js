@@ -52,7 +52,6 @@ class Home extends React.Component {
       <div>
         <nav>
           <Navbar id="navbar-2" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
-            
             <Navbar.Brand className="brandname" href="#home"><img src={logo}></img> ToneSense</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -77,8 +76,7 @@ class Home extends React.Component {
             </div>
 
             <section className="demo-section">
-              <h1 id="demo">Demo Section</h1>
-                <div>
+                <div id="demo">
                   <UserSubmissionForm 
                     getResult={this.getResult}
                     saveSubmission={this.saveSubmission}

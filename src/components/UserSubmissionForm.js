@@ -37,6 +37,7 @@ class UserSubmissionForm extends React.Component {
   render() {
     return (
       <div>
+        <h1>Demo</h1>
         <p>Get started for free and see how ToneSense can help you get your message across the right way - every time.</p>
         <Form onSubmit={this.onFormSubmit}>
           <Form.Group>
