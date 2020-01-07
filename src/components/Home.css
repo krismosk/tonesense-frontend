@@ -11,14 +11,14 @@
 .feature-section {
   /* background-image: url(../img/graysquare.png); */
   color: black;
-  padding: 6%;
+  padding-top: 6%;
 }
 
 .demo-section {
   background-color:#F2F6D4;
-  padding: 13%;
+  padding: 15%;
 }
 
 .contact-section {
-  padding: 13%;
+  padding: 15%;
 }
