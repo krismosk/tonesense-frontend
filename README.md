@@ -2,7 +2,7 @@
 # ToneSense
 
 ## Introduction
-ToneSense is a web app that allows a user to enter in a sentence and receive a sentiment analysis result from a Machine Learning Model. The ML model will return a numbered score and magnitude which represents the sentence's sentiment on a scale of likely positive, likely neutral, or likely negative. 
+ToneSense is a web app that allows a user to enter in a sentence and receive a sentiment analysis result from a Machine Learning Model. The ML model will return a numbered score and magnitude which represents the sentence's sentiment on a scale of -1.0 to 1.0. The scoring range is as follows: 0.25 to 1.0 corresponds to a result of "likely positive", -0.25 to 0.25 corresponds to a result of "likely neutral", and -1.0 to -0.25 returns corresponds to a of "likely negative"
 
 This project was built in two separate and distinct parts - *Version 1* and *Version 2*. Explained in more detail below.
 
