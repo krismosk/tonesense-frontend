@@ -10,8 +10,11 @@ This project was built in two separate and distinct parts - *Version 1* and *Ver
 This version utilizes the Google Cloud NLP API to analyze the user's sentence and return a sentiment analysis result. The web app is built with React and React-Bootstrap and uses Axios to make calls to the back end Flask API (version 1 as well). 
 
 ### Installation
-
+Make a clone of this respository. 
+Checkout the master branch.
 
 ## Version 2
 
 ### Installation
+Make a clone of this respository.
+Checkout the ml_version branch.
