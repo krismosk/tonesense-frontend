@@ -77,7 +77,7 @@ class Home extends React.Component {
             </div>
 
             <section className="demo-section">
-              <h1 id="demo">Demo Section</h1>
+              <h1 id="demo">Try it now!</h1>
                 <div>
                   <UserSubmissionForm 
                     getResult={this.getResult}
