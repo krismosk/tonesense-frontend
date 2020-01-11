@@ -9,6 +9,7 @@ class UserSubmissionForm extends React.Component {
     super(props);
     this.state = {
       sentence: '',
+      switch: true,
     };
 
     this.onFormChange = this.onFormChange.bind(this);
@@ -34,10 +35,18 @@ class UserSubmissionForm extends React.Component {
     this.props.getResult(this.state.sentence);
   }
 
+  onToggle = () => {
+    this.setState({
+      switch: !this.state.switch,
+    });
+    console.log("switch toggled");
+  }
+
   render() {
+    const labelDisplay = this.state.switch === true ? "Try with the Google NLP API" : "Try with my Fine-Tuned Machine Learning Model";
+    
     return (
       <div>
-        <h1>Demo</h1>
         <p>Get started for free and see how ToneSense can help you get your message across the right way - every time.</p>
         <Form onSubmit={this.onFormSubmit}>
           <Form.Group>
@@ -54,6 +63,12 @@ class UserSubmissionForm extends React.Component {
                 <Button variant="outline-success" onClick={this.onFormSubmit}>
                   Generate Result
                 </Button>
+                <Form.Check 
+                  type="switch"
+                  id="custom-switch"
+                  label={labelDisplay}
+                  onClick={this.onToggle}
+                />
               </Col>
             </Form.Row>
           </Form.Group>
