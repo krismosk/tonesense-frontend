@@ -34,6 +34,21 @@ class Home extends React.Component {
       });
   }
 
+  getMlResult = (submissionText) => {
+    // replace with deployed heroku link
+    axios.post(`http://localhost:5000/api/v1/results/${submissionText}`, submissionText)
+      .then((response) => {
+        this.setState({
+          results: response.data,
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          error: error.message,
+        });
+      });
+  }
+
   saveSubmission = (sentence) => {
     this.setState({
       submissionText: sentence,
@@ -80,6 +95,7 @@ class Home extends React.Component {
                 <div>
                   <UserSubmissionForm 
                     getResult={this.getResult}
+                    getMlResult={this.getMlResult}
                     saveSubmission={this.saveSubmission}
                   />
                 </div>

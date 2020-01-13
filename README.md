@@ -1,20 +1,18 @@
-
 # ToneSense
 
 ## Introduction
-ToneSense is a web app that allows a user to enter in a sentence and receive a sentiment analysis result from a Machine Learning Model. The ML model will return a numbered score and magnitude which represents the sentence's sentiment on a scale of -1.0 to 1.0. The scoring range is as follows: 0.25 to 1.0 corresponds to a result of "likely positive", -0.25 to 0.25 corresponds to a result of "likely neutral", and -1.0 to -0.25 returns corresponds to a of "likely negative"
+ToneSense is a web app that uses machine learning to determine whether a sentence is positive or negative.
 
-This project was built in two separate and distinct parts - *Version 1* and *Version 2*. Explained in more detail below.
+The app is integrated with two versions of a [Flask RESTful API.](https://github.com/krismosk/backend-capstone-2) The user is able to toggle between the first version (utilizing pre-trained Google NLP API model) and the second version (utilizing a fine-tuned Naive Bayes Classifier model).
 
-## Version 1
-This version utilizes the Google Cloud NLP API to analyze the user's sentence and return a sentiment analysis result. The web app is built with React and React-Bootstrap and uses Axios to make calls to the back end Flask API (version 1 as well). 
+The user will be able to interact with a machine learning model by submitting a sentence and receiving a result of "likely positive", "likely neutral", or "likely negative" (if Google NLP API option is toggled). If the Naive Bayes Classifier option is toggled, the user will see only "likely positive" or "likely negative" because the Naive Bayes Classifier was pre-trained with binary classification. Both versions return suggested emojis to include along with the users message to match it's tone.
 
-### Installation
-Make a clone of this respository. 
-Checkout the master branch.
-
-## Version 2
+Deployed with [Google Firebase.](https://capstone-1577215364656.firebaseapp.com/)
 
 ### Installation
-Make a clone of this respository.
-Checkout the ml_version branch.
+1. Clone this repository.
+2. Checkout master branch.
+3. Install dependencies with `npm install`.
+4. Start server with `npm start`.
+5. To interact with the corresponding Flask API, follow the installation instructions in the [corresponding repository.](https://github.com/krismosk/backend-capstone-2)
+

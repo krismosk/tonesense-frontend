@@ -9,7 +9,7 @@ class UserSubmissionForm extends React.Component {
     super(props);
     this.state = {
       sentence: '',
-      switch: true,
+      switch: false,
     };
 
     this.onFormChange = this.onFormChange.bind(this);
@@ -32,7 +32,12 @@ class UserSubmissionForm extends React.Component {
     });
     
     this.props.saveSubmission(this.state.sentence);
-    this.props.getResult(this.state.sentence);
+    if (this.state.switch === false) {
+      this.props.getMlResult(this.state.sentence);
+    }
+    else {
+      this.props.getResult(this.state.sentence);
+    }
   }
 
   onToggle = () => {
@@ -43,7 +48,7 @@ class UserSubmissionForm extends React.Component {
   }
 
   render() {
-    const labelDisplay = this.state.switch === true ? "Try with the Google NLP API" : "Try with my Fine-Tuned Machine Learning Model";
+    const labelDisplay = this.state.switch === false ? "Try with the Google NLP API" : "Try with my Fine-Tuned Machine Learning Model";
     
     return (
       <div>
@@ -62,7 +67,7 @@ class UserSubmissionForm extends React.Component {
                 /><br></br>
                 <Button variant="outline-success" onClick={this.onFormSubmit}>
                   Generate Result
-                </Button>
+                </Button><br></br>
                 <Form.Check 
                   type="switch"
                   id="custom-switch"
