@@ -33,10 +33,10 @@ class UserSubmissionForm extends React.Component {
     
     this.props.saveSubmission(this.state.sentence);
     if (this.state.switch === false) {
-      this.props.getMlResult(this.state.sentence);
-    }
-    else {
       this.props.getResult(this.state.sentence);
+    }
+    else if (this.state.switch === true ) {
+      this.props.getMlResult(this.state.sentence);
     }
   }
 
