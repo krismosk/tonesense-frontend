@@ -22,3 +22,13 @@
 .contact-section {
   padding: 15%;
 }
+
+.copy-button {
+  padding-right: 15%;
+}
+
+.divider {
+  width:5px;
+  height:auto;
+  display:inline-block;
+}

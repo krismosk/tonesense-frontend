@@ -19,8 +19,6 @@ p {
   text-align: center;
 }
 
-
-
 nav {
   font-family: 'Quicksand';
   src: local('Quicksand'), url(./fonts/Quicksand-Bold.ttf) format('tff');

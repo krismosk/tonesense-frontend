@@ -1,8 +1,10 @@
 import React from 'react';
+import './Home.css';
 import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 class UserSubmissionForm extends React.Component {
   constructor(props) {
@@ -65,6 +67,10 @@ class UserSubmissionForm extends React.Component {
                   name="sentence"
                   onChange={this.onFormChange}
                 /><br></br>
+                <CopyToClipboard className="copy-button" text="Hello!">
+                  <Button variant="outline-success">Copy to clipboard</Button>
+                </CopyToClipboard>
+                <div className="divider"></div>
                 <Button variant="outline-success" onClick={this.onFormSubmit}>
                   Generate Result
                 </Button><br></br>
