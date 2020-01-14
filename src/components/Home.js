@@ -8,6 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import github_64 from '../img/github_64.png';
 import logo from '../img/logo.png';
+import ScrollUpButton from "react-scroll-up-button"; 
 import './Home.css';
 
 class Home extends React.Component {
@@ -66,7 +67,7 @@ class Home extends React.Component {
       <div>
         <nav>
           <Navbar id="navbar-2" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
-            <Navbar.Brand className="brandname" href="#home"><img src={logo}></img> ToneSense</Navbar.Brand>
+            <Navbar.Brand className="brandname" href="#home"><img src={logo} alt="logo"></img> ToneSense</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -86,11 +87,13 @@ class Home extends React.Component {
 
             <div className="feature-section">
               <h1 id="features">Tone is essential for effective writing</h1>
+              <div className="divider"></div>
               <Features />
             </div>
 
             <section className="demo-section">
               <h1 id="demo">Try it now!</h1>
+              <div className="divider"></div>
                 <div>
                   <UserSubmissionForm 
                     getResult={this.getResult}
@@ -113,6 +116,9 @@ class Home extends React.Component {
                 </p>
                 <p><small>View source code on Github</small></p>
             </section>
+        </div>
+        <div>
+          <ScrollUpButton/>
         </div>
       </div>
     )

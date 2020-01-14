@@ -1,9 +1,11 @@
 import React from 'react';
+import './Home.css';
 import PropTypes from 'prop-types';
 import Popover from 'react-bootstrap/Popover';
 import PopoverContent from 'react-bootstrap/PopoverContent';
 import PopoverTitle from 'react-bootstrap/PopoverTitle';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Card from 'react-bootstrap/Card';
 const emoji = require("emoji-dictionary");
 
 class Result extends React.Component {
@@ -88,14 +90,17 @@ class Result extends React.Component {
     }
     else {
       return(
-        <div>
-          <h4><strong>Sentiment Analysis Results</strong></h4>          
-          <p>{`You submitted: "${results.text}"`}</p>
-          <p>{`Your sentence's tone is likely ${this.convertSentiment(results.score)}`}.</p>
-          <p>{this.renderOverlay('Score: ', 'Score Explained', 'Score of the sentiment ranges between -1.0 to 1.0 and corresponds to the overall emotional leaning of the text.')}{`${results.score}`}</p>
-          {/* <p>{this.renderOverlay('Magnitude: ', 'Magnitude Explained', 'Magnitude indicates the overall strength of emotion within the given text. Unlike score, magnitude is not normalized, each expression of emotion within the text contributes to the texts magnitude.')}{`${results.magnitude}`}</p> */}
-          <p>{`Suggested Emojis: ${this.createEmojiList(this.convertSentiment(results.score))[0]} ${this.createEmojiList(this.convertSentiment(results.score))[1]}  ${this.createEmojiList(this.convertSentiment(results.score))[2]}`}</p>
-        </div>
+        <Card bg="light">
+          <Card.Header><h1>Sentiment Analysis Results</h1></Card.Header> 
+          <Card.Body>
+            <Card.Title>
+              <p>{`Your sentence's tone is likely ${this.convertSentiment(results.score)}`}.</p>
+            </Card.Title>
+            <p>{`You submitted: "${results.text}"`}</p>
+            <p>{this.renderOverlay('Score: ', 'Score Explained', 'Score of the sentiment ranges between -1.0 to 1.0 and corresponds to the overall emotional leaning of the text.')}{`${results.score}`}</p>
+            <p>{`Suggested Emojis: ${this.createEmojiList(this.convertSentiment(results.score))[0]} ${this.createEmojiList(this.convertSentiment(results.score))[1]}  ${this.createEmojiList(this.convertSentiment(results.score))[2]}`}</p>
+          </Card.Body>
+        </Card>
       )
     }
   }

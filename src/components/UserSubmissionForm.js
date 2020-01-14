@@ -1,14 +1,17 @@
 import React from 'react';
+import './Home.css';
 import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 class UserSubmissionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       sentence: '',
+      copied: false,
       switch: false,
     };
 
@@ -44,7 +47,12 @@ class UserSubmissionForm extends React.Component {
     this.setState({
       switch: !this.state.switch,
     });
-    console.log("switch toggled");
+  }
+
+  onCopyClick = () => {
+    this.setState({
+      copied: true
+    });
   }
 
   render() {
@@ -65,15 +73,27 @@ class UserSubmissionForm extends React.Component {
                   name="sentence"
                   onChange={this.onFormChange}
                 /><br></br>
+                <CopyToClipboard 
+                  className="copy-button" 
+                  text={this.state.sentence}
+                  onCopy={this.onCopyClick}
+                  >
+                  <Button variant="outline-success">
+                    Copy to clipboard
+                  </Button>
+                </CopyToClipboard>
+                <div className="divider"></div>
                 <Button variant="outline-success" onClick={this.onFormSubmit}>
                   Generate Result
                 </Button><br></br>
+                <div className="divider"></div>
                 <Form.Check 
                   type="switch"
                   id="custom-switch"
                   label={labelDisplay}
                   onClick={this.onToggle}
                 />
+                <div className="divider"></div>
               </Col>
             </Form.Row>
           </Form.Group>
