@@ -5,12 +5,14 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import swal from 'sweetalert';
 
 class UserSubmissionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       sentence: '',
+      copied: false,
       switch: false,
     };
 
@@ -46,7 +48,14 @@ class UserSubmissionForm extends React.Component {
     this.setState({
       switch: !this.state.switch,
     });
-    console.log("switch toggled");
+  }
+
+  onCopyClick = () => {
+    swal("Copied to clipboard!");
+
+    this.setState({
+      copied: true
+    });
   }
 
   render() {
@@ -67,8 +76,14 @@ class UserSubmissionForm extends React.Component {
                   name="sentence"
                   onChange={this.onFormChange}
                 /><br></br>
-                <CopyToClipboard className="copy-button" text="Hello!">
-                  <Button variant="outline-success">Copy to clipboard</Button>
+                <CopyToClipboard 
+                  className="copy-button" 
+                  text={this.state.sentence}
+                  onCopy={this.onCopyClick}
+                  >
+                  <Button variant="outline-success">
+                    Copy to clipboard
+                  </Button>
                 </CopyToClipboard>
                 <div className="divider"></div>
                 <Button variant="outline-success" onClick={this.onFormSubmit}>
