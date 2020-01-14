@@ -7,15 +7,11 @@ h1 {
 }
 
 h4 {
-  /* font-family: 'Quicksand';
-  src: local('Quicksand'), url(./fonts/Quicksand-Medium.ttf) format('tff'); */
   font-family: 'Raleway';
   src: local('Raleway'), url(./fonts/Raleway-Medium.ttf) format('ttf');
 }
 
 p {
-  /* font-family: 'Quicksand';
-  src: local('Quicksand'), url(./fonts/Quicksand-Bold.ttf) format('tff'); */
   font-family: 'Raleway';
   src: local('Raleway'), url(./fonts/Raleway-Medium.ttf) format('ttf');
   text-align: center;
@@ -31,10 +27,6 @@ nav {
   font-size: medium;
   text-shadow: none;
 }
-
-/* .landing-title {
-  font-size: larger;
-} */
 
 .landing-container {
   padding: 10%;
