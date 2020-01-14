@@ -2,7 +2,7 @@ h1 {
   font-family: 'Raleway';
   src: local('Raleway'), url(./fonts/Raleway-Medium.ttf) format('ttf');
   font-weight: bolder;
-  font-size: larger;
+  font-size: 3rem;
   text-shadow: 2px 2px #81D8C4;
 }
 
