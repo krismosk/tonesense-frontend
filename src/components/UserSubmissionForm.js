@@ -74,6 +74,7 @@ class UserSubmissionForm extends React.Component {
                 <Button variant="outline-success" onClick={this.onFormSubmit}>
                   Generate Result
                 </Button><br></br>
+                <div className="divider"></div>
                 <Form.Check 
                   type="switch"
                   id="custom-switch"

@@ -87,11 +87,13 @@ class Home extends React.Component {
 
             <div className="feature-section">
               <h1 id="features">Tone is essential for effective writing</h1>
+              <div className="divider"></div>
               <Features />
             </div>
 
             <section className="demo-section">
               <h1 id="demo">Try it now!</h1>
+              <div className="divider"></div>
                 <div>
                   <UserSubmissionForm 
                     getResult={this.getResult}
