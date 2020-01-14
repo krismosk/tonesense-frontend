@@ -8,6 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import github_64 from '../img/github_64.png';
 import logo from '../img/logo.png';
+import ScrollUpButton from "react-scroll-up-button"; 
 import './Home.css';
 
 class Home extends React.Component {
@@ -116,6 +117,9 @@ class Home extends React.Component {
                 </p>
                 <p><small>View source code on Github</small></p>
             </section>
+        </div>
+        <div>
+          <ScrollUpButton/>
         </div>
       </div>
     )

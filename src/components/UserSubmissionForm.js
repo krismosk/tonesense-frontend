@@ -5,7 +5,6 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import swal from 'sweetalert';
 
 class UserSubmissionForm extends React.Component {
   constructor(props) {
@@ -51,8 +50,6 @@ class UserSubmissionForm extends React.Component {
   }
 
   onCopyClick = () => {
-    swal("Copied to clipboard!");
-
     this.setState({
       copied: true
     });
