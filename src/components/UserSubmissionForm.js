@@ -93,6 +93,7 @@ class UserSubmissionForm extends React.Component {
                   label={labelDisplay}
                   onClick={this.onToggle}
                 />
+                <div className="divider"></div>
               </Col>
             </Form.Row>
           </Form.Group>
