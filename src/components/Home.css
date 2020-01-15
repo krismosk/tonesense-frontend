@@ -22,12 +22,16 @@
   padding: 15%;
 }
 
-.copy-button {
+/* .copy-button {
   padding-right: 15%;
-}
+} */
 
 .divider {
   width:5px;
   height:auto;
   display:inline-block;
+}
+
+.copy-button {
+  padding: none;
 }

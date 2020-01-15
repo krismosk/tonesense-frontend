@@ -72,15 +72,13 @@ class UserSubmissionForm extends React.Component {
                   value={this.state.sentence}
                   name="sentence"
                   onChange={this.onFormChange}
-                /><br></br>
+                />
                 <CopyToClipboard 
                   className="copy-button" 
                   text={this.state.sentence}
                   onCopy={this.onCopyClick}
                   >
-                  <Button variant="outline-success">
-                    Copy to clipboard
-                  </Button>
+                  <Button className="copy-button" variant="outline-success">Copy to Clipboard</Button>
                 </CopyToClipboard>
                 <div className="divider"></div>
                 <Button variant="outline-success" onClick={this.onFormSubmit}>
