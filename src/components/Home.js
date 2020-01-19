@@ -22,7 +22,7 @@ class Home extends React.Component {
   }
 
   getResult = (submissionText) => {
-    axios.post(`http://localhost:5000/api/v1/results/${submissionText}`, submissionText)
+    axios.post(`https://tonesense.appspot.com/api/v1/results/${submissionText}`, submissionText)
       .then((response) => {
         this.setState({
           results: response.data,
@@ -36,7 +36,7 @@ class Home extends React.Component {
   }
 
   getMlResult = (submissionText) => {
-    axios.post(`http://localhost:5000/api/v2/results/${submissionText}`, submissionText)
+    axios.post(`https://tonesense.appspot.com/api/v2/results/${submissionText}`, submissionText)
       .then((response) => {
         this.setState({
           results: response.data,
