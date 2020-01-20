@@ -1,7 +1,7 @@
 # ToneSense
 
 ## Introduction
-ToneSense is a web app built with React that uses two versions of machine learning models to determine whether a sentence is positive or negative.
+ToneSense is a React web app that allows a user to enter in a sentence and receive a sentiment analysis result from a Machine Learning Model. This repository contains the source code for the React web app.
 
 The app is integrated with two versions of a [Flask RESTful API.](https://github.com/krismosk/backend-capstone-2) The user is able to toggle between the first version (utilizing pre-trained Google NLP API model) and the second version (utilizing a fine-tuned Naive Bayes Classifier model).
 
@@ -14,7 +14,7 @@ Deployed with [Google Firebase.](https://capstone-1577215364656.firebaseapp.com/
 2. Checkout master branch.
 3. Install dependencies with `npm install`.
 4. Start server with `npm start`.
-5. To interact with the corresponding Flask API, follow the installation instructions in the [corresponding repository.](https://github.com/krismosk/backend-capstone-2)
+5. To interact with the server-side Flask API, follow the installation instructions in the [corresponding repository.](https://github.com/krismosk/backend-capstone-2)
 
 ### Demo
 [![ToneSense Demo](http://img.youtube.com/vi/cTv0F3Z7DK4/0.jpg)](http://www.youtube.com/watch?v=cTv0F3Z7DK4 "ToneSense Demo")
