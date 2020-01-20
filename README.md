@@ -1,7 +1,7 @@
 # ToneSense
 
 ## Introduction
-ToneSense is a web app built with React that uses two version of machine learning models to determine whether a sentence is positive or negative.
+ToneSense is a web app built with React that uses two versions of machine learning models to determine whether a sentence is positive or negative.
 
 The app is integrated with two versions of a [Flask RESTful API.](https://github.com/krismosk/backend-capstone-2) The user is able to toggle between the first version (utilizing pre-trained Google NLP API model) and the second version (utilizing a fine-tuned Naive Bayes Classifier model).
 
